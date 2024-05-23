@@ -1,0 +1,9 @@
+/* hero.css */
+.relative {
+    transition: margin-top 0.5s ease;
+}
+
+.scrolled {
+    margin-top: -200px; /* Ajusta esto según tus necesidades */
+   
+}
