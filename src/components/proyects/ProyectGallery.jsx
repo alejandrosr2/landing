@@ -1,8 +1,14 @@
+import "./gallery.css";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import cuchillos from "../../assets/cuchillos.webp";
 import coche from "../../assets/coche.webp";
+import interior from "../../assets/interior.webp";
+import reloj from "../../assets/reloj.webp";
+import ropa from "../../assets/ropa.webp";
+import hombre from "../../assets/hombre.webp";
+import zapatillas from "../../assets/zapatillas.webp";
 
 import { SwiperSlide, Swiper } from "swiper/react";
 import 'swiper/css';
@@ -32,7 +38,7 @@ const ProyectGallery = () => {
     };
 
     return (
-        <div className="pl-[20%] pr-[20%] pt-40">
+        <div className="md:pl-[20%] md:pr-[20%] pt-40">
             <div>
                 <h1 className="text-center p-10">
                     <span className="font-bold text-3xl">PROYECTOS</span>
@@ -44,7 +50,12 @@ const ProyectGallery = () => {
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
-                    slidesPerView={3}
+                    slidesPerView={1} // Show only one slide at a time
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 3 // Show three slides at a time on larger screens
+                        }
+                    }}
                     navigation
                     grabCursor={true}
                     pagination={{ clickable: true }}
@@ -54,25 +65,22 @@ const ProyectGallery = () => {
                         <img src={cuchillos} alt="" className="cursor-pointer"/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={coche} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={reloj} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={hombre} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={interior} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={ropa} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={coche} alt="" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={coche} alt="" />
+                        <img src={zapatillas} alt="" className="cursor-pointer" />
                     </SwiperSlide>
                 </Swiper>
             </motion.div>

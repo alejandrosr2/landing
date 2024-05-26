@@ -1,0 +1,28 @@
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000000; 
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 50px; 
+}
+
+
+.swiper-pagination-bullet {
+    background-color: #fff; 
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff; 
+}
+
+
+.swiper-scrollbar {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+.swiper-scrollbar-drag {
+    background: #fff; 
+}

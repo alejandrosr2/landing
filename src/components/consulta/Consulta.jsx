@@ -1,11 +1,10 @@
-
-
 const Consulta = () => {
     return (
-        <div className="mt-40 pt-10 flex items-center justify-center bg-[#1e1e1e]">
-            <form className=" p-10 w-full max-w-lg">
+        <div className="mt-40 pt-10 bg-[#1e1e1e] flex flex-col items-center">
+            <h2 className="block pt-5 text-3xl font-bold text-center md:text-left">¿Quieres consultarnos algo?</h2>
+            <form className="p-10 w-full max-w-lg">
                 <div className="mb-5">
-                    <label htmlFor="name" className="block  font-bold mb-2">
+                    <label htmlFor="name" className="block font-bold mb-2">
                         Nombre (obligatorio)
                     </label>
                     <input
@@ -53,7 +52,7 @@ const Consulta = () => {
                 <div className="flex justify-center">
                     <button
                         type="submit"
-                        className="bg-white text-black font-bold px-4 py-2  hover:bg-[#121212] hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="bg-white text-black font-bold px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         Enviar
                     </button>
@@ -63,4 +62,4 @@ const Consulta = () => {
     );
 }
 
-export default Consulta
+export default Consulta;
