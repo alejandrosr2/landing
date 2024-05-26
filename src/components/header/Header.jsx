@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import city from "../../assets/city.webp";
 import { RiAlignJustify, RiCloseLine } from "react-icons/ri";
 
@@ -33,20 +34,25 @@ const Header = () => {
                     </nav>
                     <div className="flex md:hidden">
                         <button className="font-bold text-2xl text-gray-300 hover:text-white" onClick={toggleMenu}>
-                            {isMenuOpen ? <RiCloseLine /> : <RiAlignJustify/>}
+                            {isMenuOpen ? <RiCloseLine /> : <RiAlignJustify />}
                         </button>
                     </div>
                 </div>
-                {isMenuOpen && (
-                    <div className="fixed top-[72.5px] left-0 w-full bg-black bg-opacity-70 border-b border-white border-opacity-20 z-20 md:hidden">
+                <motion.div
+                    initial={{ height: 0 }}
+                    animate={{ height: isMenuOpen ? 'auto' : 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden fixed top-[72.5px] left-0 w-full bg-black bg-opacity-70 border-b border-white border-opacity-20 z-20 md:hidden"
+                >
+                    {isMenuOpen && (
                         <ul className="flex flex-col gap-5 p-5 font-bold text-gray-300">
                             <li><a href="#aboutUs" className="hover:text-white" onClick={toggleMenu}>Sobre nosotros</a></li>
                             <li><a href="#services" className="hover:text-white" onClick={toggleMenu}>Servicios</a></li>
                             <li><a href="#proyects" className="hover:text-white" onClick={toggleMenu}>Proyectos</a></li>
                             <li><a href="#contact" className="hover:text-white" onClick={toggleMenu}>Contacto</a></li>
                         </ul>
-                    </div>
-                )}
+                    )}
+                </motion.div>
                 <div className="flex-1"></div> {/* Spacer to push the content to the top */}
             </div>
         </div>
