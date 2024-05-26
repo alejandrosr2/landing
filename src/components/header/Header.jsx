@@ -53,7 +53,7 @@ const Header = () => {
                         </ul>
                     )}
                 </motion.div>
-                <div className="flex-1"></div> {/* Spacer to push the content to the top */}
+                <div className="flex-1"></div> 
             </div>
         </div>
     );

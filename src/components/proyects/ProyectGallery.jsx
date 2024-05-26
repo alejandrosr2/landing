@@ -50,10 +50,10 @@ const ProyectGallery = () => {
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
-                    slidesPerView={1} // Show only one slide at a time
+                    slidesPerView={1} 
                     breakpoints={{
                         768: {
-                            slidesPerView: 3 // Show three slides at a time on larger screens
+                            slidesPerView: 3 
                         }
                     }}
                     navigation
